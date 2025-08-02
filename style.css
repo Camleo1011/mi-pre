@@ -1,0 +1,132 @@
+/* Estilo oscuro y moderno para página de presentación */
+
+:root {
+    --bg-color: #181a1b;
+    --card-bg: #23272a;
+    --primary: #00bcd4;
+    --secondary: #b2ebf2;
+    --text: #ffffff;
+    --muted: #ffffff;
+    --accent: #ff4081;
+    --border-radius: 12px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.4);
+    --font-main: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--text);
+    font-family: var(--font-main);
+    box-sizing: border-box;
+}
+
+header {
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    background: #222;
+}
+
+.intro h2 {
+    margin: 0 0 0.5rem 0;
+    color: var(--secondary);
+    font-size: 2rem;
+}
+
+.intro p {
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.about h2, .contact h2 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.about p {
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact li {
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+}
+
+.contact a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 1.5rem 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+    .hero {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+    }
+}
+
